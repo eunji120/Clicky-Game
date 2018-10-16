@@ -1,7 +1,7 @@
 import React from "react";
-import "./Mastercard.css";
+import "./Matchcard.css";
 
-const Mastercard = props => (
+const Matchcard = props => (
 
     <div onClick = {() => props.setClicked(props.id)} className="card">
         <div className="img-container">
@@ -10,4 +10,4 @@ const Mastercard = props => (
     </div>
 );
 
-export default Mastercard;
+export default Matchcard;

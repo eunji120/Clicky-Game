@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Matchcard from "./components/Matchcard";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import matches from "./matchcards.json";
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,7 +14,7 @@ class App extends Component {
 
   //setting this.state.matches to the matches json array
   state = {
-    //matches,
+    matches,
     correctGuesses,
     bestScore,
     clickMessage
