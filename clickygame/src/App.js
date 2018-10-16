@@ -3,7 +3,7 @@ import Matchcard from "./components/Matchcard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import matches from "./matchcards.json";
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 let correctGuesses = 0;
@@ -89,22 +89,27 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Wrapper>
+        <Title></Title>
+        <h3 className="scoreSummary">
+        {this.state.clickMessage}
+        </h3>
+
+        <h3 className="scoreSummary">
+        Correct Guesses: {this.state.correctGuesses}
+        <br />
+        Best Score: {this.state.bestScore}
+        </h3>
+
+        {this.state.matches.map(match => (
+          <Matchcard
+            setClicked={this.setClicked}
+            id={match.id}
+            key={match.id}
+            image={match.image}
+            />
+        ))}
+      </Wrapper>
     );
   }
 }
