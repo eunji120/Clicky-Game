@@ -90,7 +90,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title></Title>
+        <Title>Click David Chrighton's Art Without Clicking the Same Thing More Than Once!</Title>
         <h3 className="scoreSummary">
         {this.state.clickMessage}
         </h3>
