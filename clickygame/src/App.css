@@ -24,6 +24,12 @@
   margin-bottom: 0px;
 }
 
+.card {
+  display: flex;
+  width: 400px;
+  height: 200px;
+}
+
 .scoreSummary {
   width: 100%;
   text-align: center;

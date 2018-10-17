@@ -3,7 +3,6 @@ import Matchcard from "./components/Matchcard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import matches from "./matchcards.json";
-//import logo from './logo.svg';
 import './App.css';
 
 let correctGuesses = 0;
@@ -90,7 +89,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Click David Chrighton's Art Without Clicking the Same Thing More Than Once!</Title>
+        <Title>Click David Crighton's Art Without Clicking the Same Thing More Than Once!</Title>
         <h3 className="scoreSummary">
         {this.state.clickMessage}
         </h3>
@@ -102,7 +101,7 @@ class App extends Component {
         </h3>
 
         {this.state.matches.map(match => (
-          <Matchcard
+          <Matchcard className="cardSize"
             setClicked={this.setClicked}
             id={match.id}
             key={match.id}
